@@ -4,7 +4,6 @@
 
   <artifactId>addressbook-wicket</artifactId>
   <packaging>pom</packaging>
-
   <name>Addressbook-Wicket</name>
   <url>https://github.com/aydinseven/addressbook-wicket</url>
 
