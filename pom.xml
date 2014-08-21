@@ -20,7 +20,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <description>A small address book web application developed with Apache Wicket, Hibernate and HSQL DB.</description>
+  <description>A small address book web application developed with Apache Wicket, Hibernate and HSQL DB</description>
   <modules>
   	<module>addressbook-wicket-hibernate</module>
   	<module>addressbook-wicket-ui</module>
