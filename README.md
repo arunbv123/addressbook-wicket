@@ -3,8 +3,8 @@
 This is a small web application build using with Apache Wicket Framework, Hibernate and HSQL. It contains two sub-projects and the HSQL database located in the following folders:
 
     - addressbook-wicket-ui: Renders the user interface in the web browser
-    - addressbook-wicket-hibernate: Contains the hibernate data models and 
-        interfaces for data manipulation
+    - addressbook-wicket-hibernate: Contains the hibernate data models and interfaces for 
+      data manipulation
     - hsqldb: The database used by the address book
 
 Before running the Wicket Address Book, the following requirements must be met:
