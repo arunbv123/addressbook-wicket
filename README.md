@@ -18,8 +18,8 @@ To run the Wicket Address Book, follow these steps:
 
     1. Start the database by running startDB_addressbook-wicket-hibernate.bat in the hsqldb folder
     1. git clone git@github.com:aydinseven/addressbook-wicket.git to checkout the project
-    2. cd addressbook-wicket
-    3. mvn clean install
+    2. go into the addressbook-wicket folder
+    3. type "mvn clean install" in the shell to build the project 
     5. Start your Tomcat Server and deploy the addressbook-wicket-ui web application
     4. Open the browser at http://localhost:8080/addressbook-wicket-ui
     
