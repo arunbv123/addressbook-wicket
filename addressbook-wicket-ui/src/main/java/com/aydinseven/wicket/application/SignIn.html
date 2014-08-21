@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+
+		<p align="right">
+			<input wicket:id="registerUser" type="submit" value="Register" />
+		</p>
+
+		<h3>Sign In</h3>
+
+		<font color="red"><span wicket:id="feedback" /></font>
+
+		<p>
+		<form wicket:id="signInForm">
+			<fieldset>
+				<table>
+					<tr>
+						<td align="right">Username:</td>
+						<td><input wicket:id="username" type="text"
+							value="foo@goo.moo" size="30" /></td>
+					</tr>
+					<tr>
+						<td align="right">Password:</td>
+						<td><input wicket:id="password" type="password"
+							value="password" size="30" /></td>
+					</tr>
+
+				</table>
+			</fieldset>
+			<br> <input type="submit" value="Sign In" />
+		</form>
+		</p>
+
+	</div>
+	<div id="ft"></div>
+</body>
+</html>

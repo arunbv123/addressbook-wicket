@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket, HSQL and Hibernate</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+		<p align="right">
+			<input wicket:id="editUsers" type="submit" value="Edit Users" /> <input
+				wicket:id="signOut" type="submit" value="Sign Out" />
+		</p>
+		<h3>... with Apache Wicket</h3>
+		<font color="red"><span wicket:id="feedback">message</span></font>
+
+		<p>
+		<table cellpadding="4" width="100%" border="0" align="center">
+
+			<tr>
+				<td bgcolor="lightgrey"><b>First Name</b></td>
+				<td bgcolor="lightgrey"><b>Last Name</b></td>
+				<td bgcolor="lightgrey"><b>Date Of Birth</b></td>
+				<td bgcolor="lightgrey"></td>
+				<td bgcolor="lightgrey"></td>
+				<td bgcolor="lightgrey"></td>
+			</tr>
+
+			<tr wicket:id="contactList" class="mark">
+				<td><span wicket:id="firstName">message</span></td>
+				<td><span wicket:id="lastName">message</span></td>
+				<td><span wicket:id="dateOfBirth">message</span></td>
+				<td><input wicket:id="showContact" type="submit" value="View" /></td>
+				<td><input wicket:id="editContact" type="submit" value="Edit" /></td>
+				<td><input wicket:id="removeContact" type="submit"
+					value="Remove" /></td>
+				<td><div wicket:id="modalWindow"></div></td>
+			</tr>
+
+		</table>
+		</p>
+
+		<span wicket:id="pageNavigator" />
+
+		<p>
+			<input wicket:id="create_new_contact_link" type="submit"
+				value="Create a new Contact (Admin only)" /><br>
+			<br>
+
+		</p>
+	</div>
+	<div id="ft">
+		<br>
+		<br>
+		<center>
+			<span wicket:id="userInfo">message</span>
+		</center>
+	</div>
+</body>
+</html>

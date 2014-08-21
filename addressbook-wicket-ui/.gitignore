@@ -1,0 +1,17 @@
+# Mac OS
+.DS_Store
+
+# IDEA
+.idea/
+*.iml
+out/
+
+# Maven
+target/
+
+#Eclipse
+.settings/
+.classpath
+.project
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+		<h3>Edit Contact Details</h3>
+		<font color="red"><span wicket:id="feedback">message</span></font>
+
+		<p>
+		<form wicket:id="editContactForm">
+			<fieldset>
+				<!-- <legend>Edit Contact Details</legend> -->
+				<table cellpadding="3">
+					<tr>
+						<td align="right">First Name:*</td>
+						<td><input wicket:id="firstName" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Last Name:*</td>
+						<td><input wicket:id="lastName" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Date Of Birth:</td>
+						<td><input type="text" wicket:id="dateOfBirth" /></td>
+					</tr>
+				</table>
+			</fieldset>
+			<br> <input type="submit" name="Submit" value="Save Contact" />
+		</form>
+		</p>
+
+		<br>
+		<h3>Edit Contact Addresses</h3>
+
+		<p>
+		<table cellpadding="3" width="100%" border="0" align="center">
+
+			<tr>
+				<td bgcolor="lightgrey"><b>Street</b></td>
+				<td bgcolor="lightgrey"><b>Zip Code</b></td>
+				<td bgcolor="lightgrey"><b>City</b></td>
+				<td bgcolor="lightgrey"><b>Country</b></td>
+				<td bgcolor="lightgrey"><b>Work Address</b></td>
+				<td bgcolor="lightgrey"></td>
+				<td bgcolor="lightgrey"></td>
+			</tr>
+
+			<tr wicket:id="addressList">
+				<form wicket:id="form">
+
+					<td><input wicket:id="street" type="text" /></td>
+					<td><input wicket:id="zipcode" type="text"></td>
+					<td><input wicket:id="city" type="text"></td>
+					<td><select wicket:id="country">
+							<option>value</option>
+							<option>value</option>
+					</select></td>
+					<td><input wicket:id="isWorkAddress" type="checkbox" /></td>
+					<td><input type="submit" name="Submit" value="Save" /></td>
+				</form>
+				<!--<td><a wicket:id = "updateAddress" href="#">Save</a></td>-->
+				<td><input wicket:id="removeAddress" type="submit"
+					value="Remove" /></td>
+			</tr>
+
+			<!-- List without form input fields: 
+          <tr wicket:id="addressList">
+           <td><span wicket:id="street">message</span></td>
+           <td><span wicket:id="zipcode">message</span></td>
+           <td><span wicket:id="city">message</span></td>
+           <td><span wicket:id="country">message</span></td>
+           <td><span wicket:id="isWorkAddress">message</span></td>
+           <td><a wicket:id = "removeAddress" href="#">Remove</a></td>
+          </tr> 
+          -->
+		</table>
+		</p>
+		<span wicket:id="pageNavigator" /><br> <br> <input
+			wicket:id="addAddressLink" type="submit" value="Add New Address" />
+		<input wicket:id="backLink" type="submit" value="Back to Contact List" />
+	</div>
+	<div id="ft"></div>
+</body>
+</html>

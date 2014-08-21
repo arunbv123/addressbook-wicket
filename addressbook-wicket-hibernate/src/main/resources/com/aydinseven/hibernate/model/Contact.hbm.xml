@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21.04.2014 23:20:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.aydinseven.hibernate.model.Contact" table="Contacts">
+        <id name="id" type="int">
+            <column name="CONTACT_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="firstName" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        
+        <property name="lastName" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        
+        <property name="dateOfBirth" type="java.util.Date">
+            <column name="DATE_OF_BIRTH" />
+        </property>
+        
+        <set name="addresses" table="Addresses" inverse="true" lazy="false" cascade="all" fetch="select">
+            <key>
+                <column name="CONTACT_ID" not-null="true"/>
+            </key>
+            <one-to-many class="com.aydinseven.hibernate.model.Address" />
+        </set>
+    </class>
+</hibernate-mapping>

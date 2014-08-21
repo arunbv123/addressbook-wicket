@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+
+		<h3>Edit Users</h3>
+
+		<font color="red"><span wicket:id="feedback" /></font>
+
+		<p>
+		<table cellpadding="3" width="100%" border="0" align="center">
+
+			<tr>
+				<td bgcolor="lightgrey"><b>Username</b></td>
+				<td bgcolor="lightgrey"><b>Password</b></td>
+				<td bgcolor="lightgrey"><b>Role</b></td>
+				<td bgcolor="lightgrey"></td>
+				<td bgcolor="lightgrey"></td>
+			</tr>
+
+			<tr wicket:id="userList">
+				<form wicket:id="form">
+
+					<td><input wicket:id="username" type="text" /></td>
+					<td><input wicket:id="password" type="text"></td>
+					<td><select wicket:id="role">
+							<option>value</option>
+							<option>value</option>
+					</select></td>
+					<td><input type="submit" name="Submit" value="Save" /></td>
+				</form>
+				<td><input wicket:id="removeAddress" type="submit"
+					value="Remove" /></td>
+			</tr>
+
+		</table>
+		</p>
+		<span wicket:id="pageNavigator" /><br> <br> <input
+			wicket:id="backLink" type="submit" value="Go back" />
+	</div>
+	<div id="ft"></div>
+</body>
+</html>

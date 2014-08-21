@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22.04.2014 01:59:59 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.aydinseven.hibernate.model.Address" table="Addresses">
+        <id name="id" type="int">
+            <column name="ADDRESS_ID" />
+            <generator class="native" />
+        </id>
+        <property name="street" type="java.lang.String">
+            <column name="STREET" />
+        </property>
+        <property name="zipcode" type="int">
+            <column name="ZIPCODE" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+                <property name="country" type="java.lang.String">
+            <column name="COUNTRY" />
+        </property>
+                <property name="isWorkAddress" type="boolean">
+            <column name="IS_WORK_ADDRESS" />
+        </property>
+        <many-to-one name="contact" class="com.aydinseven.hibernate.model.Contact" fetch="select">
+            <column name="CONTACT_ID" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+		<h3>Create a new contact</h3>
+		<font color="red"><span wicket:id="feedback" /></font>
+		<p>
+		<form wicket:id="createContactForm">
+			<fieldset>
+				<!-- <legend>Create a new Contact</legend>-->
+				<table cellpadding="3">
+					<tr>
+						<td align="right">First Name:*</td>
+						<td><input wicket:id="firstName" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Last Name:*</td>
+						<td><input wicket:id="lastName" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Date Of Birth:</td>
+						<td><input type="text" wicket:id="dateOfBirth" /></td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<br> <input type="submit" name="Submit" value="Submit" /> <input
+				wicket:id="backLink" type="submit" value="Cancel" />
+
+		</form>
+		</p>
+		<!-- 
+    <p>
+        
+        <wicket:container wicket:id="welcome">message</wicket:container>
+    </p>
+    -->
+	</div>
+	<div id="ft"></div>
+</body>
+</html>

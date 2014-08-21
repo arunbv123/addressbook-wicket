@@ -1,0 +1,1 @@
+java -classpath lib/hsqldb.jar org.hsqldb.util.DatabaseManager  -user sa -url jdbc:hsqldb:hsql://localhost/addressbook

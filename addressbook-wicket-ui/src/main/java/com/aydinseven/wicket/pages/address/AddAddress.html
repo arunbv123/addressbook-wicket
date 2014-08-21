@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Address Book with Apache Wicket</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+
+			<h1>Address Book</h1>
+		</div>
+	</div>
+	<div id="bd">
+		<h3>Add an address to contact</h3>
+		<font color="red"><span wicket:id="feedback" /></font>
+		<p>
+		<form wicket:id="createAddressForm">
+			<fieldset>
+				<!-- <legend>Create a new Contact</legend>-->
+				<table cellpadding="3">
+					<tr>
+						<td align="right">Street:*</td>
+						<td><input wicket:id="street" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Zip Code:*</td>
+						<td><input wicket:id="zipcode" type="text" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">City:*</td>
+						<td><input type="text" wicket:id="city" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Country:*</td>
+						<td><select wicket:id="country">
+								<option>value</option>
+								<option>value</option>
+						</select></td>
+					</tr>
+
+					<tr>
+						<td align="right">Work Address:</td>
+						<td><input wicket:id="isWorkAddress" type="checkbox" /></td>
+					</tr>
+
+				</table>
+			</fieldset>
+
+			<br> <input type="submit" name="Submit" value="Submit" /> <input
+				wicket:id="backLink" type="submit" value="Back" />
+		</form>
+		</p>
+		<!-- 
+    <p>
+        
+        <wicket:container wicket:id="welcome">message</wicket:container>
+    </p>
+    -->
+	</div>
+	<div id="ft"></div>
+</body>
+</html>

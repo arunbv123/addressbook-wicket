@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings, Connect to HSQL, IN Memory  -->
+    <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+    <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+    <property name="connection.url">jdbc:hsqldb:hsql://localhost/addressbook</property>
+    <property name="connection.username">sa</property>
+    <property name="connection.password"></property>
+
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">1</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+    <!--create the database schema on startup if required -->
+    <property name="hbm2ddl.auto">update</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+    
+    <mapping resource="com/aydinseven/hibernate/model/Contact.hbm.xml"></mapping>
+    <mapping resource="com/aydinseven/hibernate/model/Address.hbm.xml"></mapping>
+    <mapping resource="com/aydinseven/hibernate/model/User.hbm.xml"></mapping>
+  </session-factory>
+</hibernate-configuration>
