@@ -25,6 +25,7 @@ import com.aydinseven.hibernate.UserDAO;
 import com.aydinseven.hibernate.UserDAOImpl;
 import com.aydinseven.hibernate.model.Address;
 import com.aydinseven.hibernate.model.User;
+import com.aydinseven.wicket.application.SignInSession;
 import com.aydinseven.wicket.pages.HomePage;
 
 //@AuthorizeInstantiation("ADMIN")
@@ -60,7 +61,6 @@ public class EditUsers extends WebPage {
         		Form<User> form = new UpdateUserForm("form", userCompoundPropModel);
         		add(form);
         		
-        		// Add the address' fields to the listview
         		TextField<String> usernameField = new TextField<String>("username");
         		usernameField.setRequired(true);
         		usernameField.setDefaultModel(new PropertyModel<Address>(u, "username"));
@@ -84,10 +84,18 @@ public class EditUsers extends WebPage {
                 add(rolesDDC);
                 form.add(rolesDDC);
         		
-        		// Add a link to remove the chosen address
-        		userItem.add(removeUserLink("removeAddress", u));
-        		
+        		final SignInSession session = (SignInSession) getSession();
+                final User userInSession = session.getUser();
+                
+                // Add a link to remove the chosen user if it's not the current active user
+                if (u.getUsername().equalsIgnoreCase(userInSession.getUsername())) {
+        		userItem.add(removeUserLink("removeUser", u).setEnabled(false));
+                } else {
+                	userItem.add(removeUserLink("removeUser", u));
+                }
+                
         		userItem.add(form);
+                
         	}
         });
         
