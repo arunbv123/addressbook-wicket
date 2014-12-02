@@ -1,4 +1,4 @@
-    Address Book Web Application with Apache Wicket, Hibernate and HSQL
+    Address Book Web Application with Apache Wicket, Java, Hibernate and HSQL
 
 This is a small web application build using with Apache Wicket Framework, Hibernate and HSQL. It contains two sub-projects and the HSQL database located in the following folders:
 
